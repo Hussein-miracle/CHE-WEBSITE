@@ -1,0 +1,2 @@
+NOTE TO ABEL:
+    Please the pages folder is for non-reusable components
