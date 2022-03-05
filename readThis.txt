@@ -1,2 +1,14 @@
 NOTE TO ABEL:
-    Please the pages folder is for non-reusable components
+    Please the pages folder is for non-reusable components;
+    And also fetch/pull first so we dont get conflicts
+    also you should create and a branch everytime you want to start another page so we merge tHEM TOGETHER LATER
+
+Date (05/03/2022) NOTE TO ABEL:
+        I've built the homepage and set-up the routes;
+        The homepage is only perfectly responsive up till 860px;
+        Created components(button,card)
+        
+
+
+
+

@@ -1,0 +1,183 @@
+.homepage{
+    width: 100vw;
+    &__header{
+        height: max-content;
+        position:relative;
+        background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.8)),url(../../assets/images/Hero-image.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height:60vh;
+
+        padding-left: 4rem;
+        padding-top: 2rem;
+        
+        h1{
+                color: #fff;
+                font-weight: 700;
+                font-size: 3rem;
+            }
+        h4{
+            color: #F4C44E;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+        &--content{
+            position: absolute;
+            left: 0;
+            top:0;            
+        }
+
+    }
+
+
+
+    &__hod-address{
+        width: 100vw;
+        height: 90vh;
+        display: flex;
+        gap: 6rem;
+        margin: 6rem 0;
+        // padding-left: 2rem;
+        &--info{
+            width: 30vw;
+        }
+        &--content{
+            z-index: -10;
+            text-align: left;
+            padding: 2rem 5rem 2rem 12rem;
+            width: 70vw;
+            background-image:linear-gradient(45deg,rgba(13, 143, 69,0.9),rgba(13, 143, 69, 0.8)),url(../../assets/images/Hod-welcome-Addres-bg.png);
+            background-size:cover;
+            background-repeat: no-repeat;
+            border-top-left-radius:6px;
+            border-bottom-left-radius:6px;
+            -webkit-border-top-left-radius:6px;
+            -webkit-border-bottom-left-radius:6px;
+
+            -moz-border-top-left-radius:6px;
+            -moz-border-bottom-left-radius:6px;
+
+            -ms-border-top-left-radius:6px;
+            -ms-border-bottom-left-radius:6px;
+
+            -o-border-bottom-left-radius:6px;
+            -o-border-top-left-radius:6px;
+        }
+
+        &--text{
+            color: #fff;
+            line-height: 1.8rem;
+            letter-spacing: 2px;
+        }
+        &--details{
+            display: flex;
+            flex-flow: column;
+            margin-top: 1rem;
+            margin-left: 5rem;
+            // gap:2px;
+            // align-items: center;
+        }
+
+        &--img{
+            position: relative;
+            margin-top: 3.5rem;
+            width: 160%;
+            object-fit: cover;
+        }
+
+        &--img-container{
+            position: relative;
+            
+            &::after{
+                content: "";
+                width: 160%;
+                height: 30%;
+                position: absolute;
+                left: -16px;
+                bottom: 17%;
+                border: 1px solid #F4C44E;
+                border-radius:10px    ;
+                -webkit-border-radius:10px    ;
+                -moz-border-radius:10px    ;
+                -ms-border-radius:10px    ;
+                -o-border-radius:10px    ;
+                z-index: -1;
+            }
+        }
+
+        &--title{
+            color: #F4C44E;
+            // text-align: center;
+            
+        }
+        &--name{
+            color: #0D8F45;
+
+            // margin-top: 5rem;
+        }
+        &--role{
+            color: #F4C44E;
+            margin-top: -.5rem;
+        }
+
+    }
+
+    &__about-us-intro{
+        margin-bottom: 6rem;
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        &--title{
+            color: #0D8F45;
+            font-weight: 700;
+        }
+        &--text{
+            line-height: 1.8rem;
+            letter-spacing: 1.2px;
+        }
+        &--content-container{
+            width: 65%;
+            height: 100%;
+            background:  #E4E2E2;
+            padding: 3.5rem 7.5rem 3.5rem 3.5rem;
+        }
+        &--img{
+            position: absolute;
+            left: 0;
+            top:-4rem;
+            width: 80%;
+            // bottom: 5rem;
+            object-fit: contain;
+            // transform:translateY(-50%) ;
+            // -webkit-transform:translateY(-50%) ;
+            // -moz-transform:translateY(-50%) ;
+            // -ms-transform:translateY(-50%) ;
+            // -o-transform:translateY(-50%) ;
+}
+        &--img-container{
+            position: relative;
+            width: 35%;
+            background:  #E4E2E2;
+            height: 80%;
+        }
+    }
+
+
+    &__news-and-events{
+        padding:  0 4rem;
+        &--title{
+            color: #0D8F45;
+            font-weight: 700;
+            margin-left:2rem ;
+        }
+
+        &--content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    
+}

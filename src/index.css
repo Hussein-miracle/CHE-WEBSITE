@@ -1,13 +1,26 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: 'Campton',sans-serif;
+    src: url('./assets/fonts/Campton font/Campton Bold OTF.otf') format('opentype'),/* Super Modern Browsers */
+       url('./assets/fonts/Campton font/Campton Light OTF.otf') format('opentype'), /* Super Modern Browsers */
+       url('./assets/fonts/Campton font/Campton-Bold TTF.ttf') format('truetype'), /* Super Modern Browsers */
+       url('./assets/fonts/Campton font/Campton-Light TTF.ttf') format('truetype'), /* Super Modern Browsers */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Campton",sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
 }
+body::-webkit-scrollbar {
+  display: none;
+  
+}
+
+
+
+
