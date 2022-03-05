@@ -1,0 +1,68 @@
+.navigation {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7%;
+    margin: 0;
+}
+
+.navigation .brands {
+    display: flex;
+    align-items: center;
+}
+.navigation .links {
+    display: flex;
+    align-items: center;
+}
+.navigation .links .navicon {
+    display: none;
+}
+.navigation .links ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+.navigation .links ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+.navigation .links ul li a.active {
+    color: #F4C44E;
+}
+
+@media screen and (max-width: 1086px) {
+    .navigation {
+        position: fixed;
+        width: 100%;
+    }
+    .navigation .links .navicon {
+        display: block;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        margin: 25px;
+        position: fixed;
+    }
+    .navigation .links ul {
+        background-color: #000;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        padding: 7% 0 0 0;
+        margin: 0;
+    }
+    .navigation .links ul.open {
+        width: 75%;
+        transition: 1s width 0.5s linear;
+    }
+    .navigation .links ul.close {
+        display: none;
+        padding: 10px;
+    }
+    .navigation .links ul li {
+        display: block;
+        padding: 10px;
+    }
+}
