@@ -1,2 +1,18 @@
 NOTE TO ABEL:
     Please the pages folder is for non-reusable components
+NOTE TO ABDULAHI:
+    What i did so far:
+        1. The navbar
+        2. The router
+        3. Created the pages, components, styles and imgs folder
+        4. For pages, I created home.jsx, about.jsx
+        5. For components, i created the navbar.jsx
+        6. Inside imgs folder, I sectioned images for each pages into separate folders
+        7. Inside styles folder, I named each style based on the page it is styling.
+        8. Added responsiveness to parts of the pages that needed it.
+    What i haven't added:
+        1. other pages apart from home and about
+        2. navicon to be used for the menu
+        3. campton font
+        4. heading image
+        5. footer
