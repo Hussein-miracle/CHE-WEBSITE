@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     margin-bottom: 0;
     height: 3.8rem;
     width: 100vw;
@@ -277,4 +278,28 @@
 
     }
 }
+}
+
+
+@media (max-width:860px) {
+    .header {
+
+        &__logos{
+            margin-left: 2rem;
+            
+            padding-right: 10%;
+            ;
+
+        }
+        &__nav{
+            &--items-container{
+display: none;
+            }
+            
+
+
+
+
+        }
+    }
 }

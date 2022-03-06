@@ -1,0 +1,170 @@
+.about .heading {
+    height: 80vh;
+    background: #888;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-left: 7%;
+}
+.about .heading .texts {
+    margin-top: -40px;
+}
+.about .heading h1 {
+    font-size: 4.5vw;
+    line-height: 40px;
+}
+.about .heading h1:nth-child(2) {
+    color: #F4C44E;
+}
+.about_us, .programmes {
+    padding: 7%;
+}
+.about_us h1, .programmes h1 {
+    text-align: center;
+    color: #0D8F45;
+}
+.about_us p, .programmes p {
+    line-height: 40px;
+    text-align: justify;
+}
+.objectives, .achievements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 7%;
+}
+.objectives h1, .achievements h1 {
+    color: #0D8F45;
+}
+.objectives_text {
+    margin-right: 15%;
+    line-height: 40px;
+}
+.achievements_text {
+    margin-left: 15%;
+    line-height: 40px;
+}
+.research {
+    padding: 7%;
+}
+.research h1 {
+    color: #0D8F45;
+}
+.research .areas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.research .areas .area {
+    min-width: 30%;
+    text-align: center;
+    margin-top: 20px;
+}
+.research .areas .area img {
+    max-width: 350px;
+    min-width: 250px;
+}
+
+/* Responsiveness to smaller screen sizes */
+@media screen and (max-width: 1200px) {
+    .achievements_text, .objectives_text {
+        margin: 20px;
+    }
+    .achievements img, .objectives img {
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .achievements img, .objectives img {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .achievements, .objectives {
+        flex-wrap: wrap;
+    }
+    .achievements_text, .objectives_text {
+        margin: 0;
+    }
+    .achievements img, .objectives img {
+        width: 80%;
+    }
+    .research .areas .area img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .heading h1 {
+        font-size: 30px;
+    }
+}
+
+.navigation {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7%;
+    margin: 0;
+}
+
+.navigation .brands {
+    display: flex;
+    align-items: center;
+}
+.navigation .links {
+    display: flex;
+    align-items: center;
+}
+.navigation .links .navicon {
+    display: none;
+}
+.navigation .links ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+.navigation .links ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+}
+.navigation .links ul li a.active {
+    color: #F4C44E;
+}
+
+@media screen and (max-width: 1086px) {
+    .navigation {
+        position: fixed;
+        width: 100%;
+    }
+    .navigation .links .navicon {
+        display: block;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        margin: 25px;
+        position: fixed;
+    }
+    .navigation .links ul {
+        background-color: #000;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        top: 0;
+        padding: 7% 0 0 0;
+        margin: 0;
+    }
+    .navigation .links ul.open {
+        width: 75%;
+        transition: 1s width 0.5s linear;
+    }
+    .navigation .links ul.close {
+        display: none;
+        padding: 10px;
+    }
+    .navigation .links ul li {
+        display: block;
+        padding: 10px;
+    }
+} 

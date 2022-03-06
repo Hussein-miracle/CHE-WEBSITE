@@ -7,7 +7,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
-        height:60vh;
+        height:70vh;
 
         padding-left: 4rem;
         padding-top: 2rem;
@@ -180,4 +180,59 @@
     }
 
     
+}
+
+
+@media (max-width:45em) {
+    .homepage{
+        &__header{
+            height: max-content;
+            width: 100%;
+            height:60vh;
+
+            padding-left: 1rem;
+            // padding-right: 4rem;
+            padding-top: 2rem;
+            
+            h1{
+                    color: #fff;
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+            h4{
+                color: #F4C44E;
+                font-weight: 400;
+                font-size: 1.1rem;
+            }
+            &--content{
+                position: absolute;
+                left: 0;
+                top:0;            
+            }
+        }
+    }
+}
+@media (max-width:53.75em) {
+    .homepage{
+        &__header{
+            height: max-content;
+            width: 100%;
+            height:65vh;
+
+            padding-left: 4rem;
+            padding-top: 2rem;
+            
+            h1{
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                }
+            h4{
+                color: #F4C44E;
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+
+        }
+    }
 }
