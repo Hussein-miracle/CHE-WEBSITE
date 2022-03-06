@@ -1,45 +1,30 @@
-<<<<<<< HEAD
-import React from "react";
+import React,{useState} from "react";
 import {Routes,Route} from "react-router-dom";
 
 import Header from "./pages/header/header";
 import Homepage from "./pages/homepage/homepage";
+import AboutUs from "./pages/about-us/about-us";
 import Footer from "./pages/footer/footer";
-
+// import Navbar from "./pages/navbar/navbar";
+import MobileNav from "./pages/mobile-nav/mobile-nav";
 import './App.css';
-=======
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-//Import the pages 
-import Home from './pages/home.jsx';
-import About from './pages/about.jsx';
-
-//import the navbar component into all pages
-import Navbar from "./components/navbar";
-
->>>>>>> e870c09ca48238266b320d87143cfab04efacc0c
 
 function App() {
-
+  const [showMobileNav ,setShowMobileNav] = useState(false);
   return (
     <div className="App">
-<<<<<<< HEAD
-      <Header/>
+    
+      <Header showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav}/>
+      {showMobileNav? <MobileNav setShowMobileNav={setShowMobileNav}/> :null}
+
+      
       <Routes>
-        <Route path="/" element={<Homepage/>}/>
-
-
-      </Routes>
-      <Footer/>
-=======
-      <Router>
-        <Navbar/>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/about" exact element={<About/>} />
+          <Route path="/" exact element={<Homepage />} />
+          <Route path="/about-us" exact element= {<AboutUs/>} />
         </Routes>
-      </Router>
->>>>>>> e870c09ca48238266b320d87143cfab04efacc0c
+
+      <Footer/>
     </div>
   );
 }
