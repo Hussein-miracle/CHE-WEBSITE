@@ -10,7 +10,7 @@ const Card = ({imgUrl})=> {
             <p className="card__content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            <Button style={{
+            <Button text={"Read More"} style={{
                 textAlign:"center"
             }}/>
         </div>

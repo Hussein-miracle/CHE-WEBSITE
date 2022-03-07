@@ -21,7 +21,7 @@
         background-position: center;
         // text-align: center;
 
-        padding: 3rem 2.5rem;
+        padding: 3rem 4rem;
 
         &--navigations{
             display: flex;
@@ -35,7 +35,7 @@
 
             &__items{
                 margin-left: -2.2rem;
-                align-self: start;
+                align-self: flex-start;
                 display: flex;
                 flex-flow: column;
                 justify-content: space-between;
@@ -93,7 +93,7 @@
             &__titles{
                 display: flex;
                 flex-direction: column;
-                align-items: start;
+                align-items: flex-start;
 
                 text-align: left;
             }
@@ -124,4 +124,14 @@
         }
     }
     
+}
+
+
+@media (max-width:45em) {
+    .footer {
+        &__content {
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+    }
 }

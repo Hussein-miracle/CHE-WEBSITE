@@ -4,6 +4,7 @@ import {Routes,Route} from "react-router-dom";
 import Header from "./pages/header/header";
 import Homepage from "./pages/homepage/homepage";
 import AboutUs from "./pages/about-us/about-us";
+import News from "./pages/news/news";
 import Footer from "./pages/footer/footer";
 // import Navbar from "./pages/navbar/navbar";
 import MobileNav from "./pages/mobile-nav/mobile-nav";
@@ -19,9 +20,10 @@ function App() {
       {showMobileNav? <MobileNav setShowMobileNav={setShowMobileNav}/> :null}
 
       
-      <Routes>
+        <Routes>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/about-us" exact element= {<AboutUs/>} />
+          <Route path="/news-&-blog" exact element= {<News/>} />
         </Routes>
 
       <Footer/>
