@@ -36,6 +36,7 @@ const Homepage = () => {
             </header>
 
             <section className="homepage__hod-address">
+
                 <div className="homepage__hod-address--info">
                     <div className="homepage__hod-address--img-container">
                     
@@ -64,6 +65,17 @@ const Homepage = () => {
 
             </section>
 
+
+
+
+
+
+
+
+
+
+
+
             <section className="homepage__about-us-intro">
                 <div className="homepage__about-us-intro--content-container">
                     <h2 className="homepage__about-us-intro--title">About Us</h2>
@@ -89,6 +101,7 @@ const Homepage = () => {
                 {
                     cardList.map( ({imgUrl,id}) => <Card key={id} imgUrl={imgUrl}/>)
                 }
+                
                 </div>
             </section>
         </div>

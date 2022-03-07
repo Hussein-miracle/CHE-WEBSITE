@@ -14,12 +14,26 @@ body {
   font-family: "Campton",sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --yellow-color:#F4C44E;
+  --green-color:##0D8F45;
   
 }
 body::-webkit-scrollbar {
   display: none;
   
 }
+
+input,button{
+  outline:none;
+}
+
+input:focus,
+button:focus{
+  outline:none;
+}
+
+
 
 
 

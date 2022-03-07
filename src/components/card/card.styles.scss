@@ -15,3 +15,21 @@
         width: 99%;
     }
 }
+
+
+@media (max-width:45em){
+    .card{
+        width: 70%;
+        &:not(:last-of-type){
+            margin-bottom: 2rem;
+        }
+    }
+}
+@media (max-width:53.75em){
+    .card{
+        width: 80%;
+        &:not(:last-of-type){
+            margin-bottom: 2rem;
+        }
+    }
+}
