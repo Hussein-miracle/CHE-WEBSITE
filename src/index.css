@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   --yellow-color:#F4C44E;
-  --green-color:##0D8F45;
+  --green-color:#0D8F45;
   
 }
 body::-webkit-scrollbar {
@@ -35,6 +35,8 @@ button:focus{
 
 
 
-
+h1,h2,p,h3,h4,h5,h6{
+  overflow-wrap: break-word;
+}
 
 

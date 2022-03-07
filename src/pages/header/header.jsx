@@ -1,7 +1,6 @@
-import React, { useState,useContext } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import PropTypes from 'prop-types'
-import Navbar from "../navbar/navbar";
+
 import NavButton from '../../components/nav-button/nav-button.component';
 import NSCHELogo from "../../assets/images/NSChE logo.png";
 import OAULogo from "../../assets/images/OAU logo.png";
