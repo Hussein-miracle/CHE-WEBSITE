@@ -84,7 +84,7 @@ const Homepage = () => {
 
                     </p>
 
-                    <Button/>
+                    <Button text={"Read More"}/>
                 </div>
 
                 <div className="homepage__about-us-intro--img-container">
