@@ -26,6 +26,12 @@ Date (05/03/2022) NOTE TO ABEL:
         The homepage is only perfectly responsive up till 860px;
         Created components(button,card);
         Built a new navbar;
+
+
+Date (07/03/2022) NOTE TO ABDULAHI:
+        I made the news&blog page;
+        Added some little responsiveness to the footer;
+        added the header image for the about-us page
         
         
 

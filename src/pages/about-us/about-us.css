@@ -1,24 +1,28 @@
 .heading {
-    height: 80vh;
-    background: #888;
+    height: 70vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(../../assets/images/About-Us-Hero-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
     margin: 0;
     display: flex;
     align-items: center;
     padding: 0;
-    padding-left: 7%;
+    padding-left: 5%;
 }
 .heading .texts {
     margin-top: -40px;
 }
 .heading h1 {
-    font-size: 4.5vw;
-    line-height: 40px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 3rem;
 }
 .heading h1:nth-child(2) {
     color: #F4C44E;
 }
 .about_us, .programmes {
-    padding: 7%;
+    padding: 5%;
 }
 .about_us h1, .programmes h1 {
     text-align: center;
@@ -32,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10% 7%;
+    padding: 10% 5%;
 }
 .objectives h1, .achievements h1 {
     color: #0D8F45;
@@ -46,7 +50,7 @@
     line-height: 40px;
 }
 .research {
-    padding: 7%;
+    padding: 5%;
 }
 .research h1 {
     color: #0D8F45;
@@ -79,6 +83,9 @@
     .achievements img, .objectives img {
         max-width: 400px;
     }
+    .heading h1 {
+        font-size: 2.5rem;
+    }
 }
 @media screen and (max-width: 900px) {
     .achievements, .objectives {
@@ -96,6 +103,6 @@
 }
 @media screen and (max-width: 800px) {
     .heading h1 {
-        font-size: 30px;
+        font-size: 2rem;
     }
 }

@@ -1,0 +1,196 @@
+.news-and-blogs {
+    &__header {
+        height: 25vw;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(../../assets/images/Hero-image.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 30%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            font-weight: 700;
+
+            span {
+                color: #F4C44E;
+            }
+        }
+    }
+
+    .news {
+        padding: 4rem;
+        padding-bottom: 1rem;
+
+        &__header {
+            color: #0D8F45;
+
+            h1 {
+                font-weight: 800;
+            }
+        }
+        &__body {
+            &--card {
+                margin: 5rem 0;
+                padding: 15em 5em 2em 5em;
+                min-height: 350px;
+                background-size: cover;
+
+                h3 {
+                    color: #fff;
+                    line-height: 3rem;
+                }
+            }
+        }
+    }
+
+    .show-more-button {
+        text-align: center;
+    }
+
+    .blog {
+        padding: 4rem;
+        padding-bottom: 1rem;
+
+        &__header {
+            color: #0D8F45;
+
+            h1 {
+                font-weight: 800;
+            }
+        }
+        &__body {
+            display: flex;
+            justify-content: space-between;
+
+            &--card {
+                width: 46%;
+                margin: 2rem 0;
+                padding: 15em 5em 2em 5em;
+                min-height: 450px;
+                background-size: cover;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+
+                h3 {
+                    color: #fff;
+                    line-height: 3rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .news-and-blogs {
+        &__header {
+            height: 30vh;
+        }
+
+        .news {
+            &__body {
+                &--card {
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 20px;
+
+                    h3 {
+                        line-height: 2rem;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .blog {
+            &__body {
+                &--card {
+                    padding: 20px;
+                    min-height: 300px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .news-and-blogs {
+        &__header {
+            height: 40vh;
+            padding-left: 7%;
+
+            h1{
+                font-size: 2rem;
+            }
+        }
+        .news {
+            &__header {
+                h1 {
+                    font-size: 18px;
+                }
+            }
+            &__body {
+                &--card {
+                    min-height: 250px;
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .blog {
+            padding: 1rem;
+            
+            &__header {
+                h1{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .news-and-blogs {
+        &__header {
+            h1{
+                font-size: 2rem;
+            }
+        }
+        .news {
+            padding: 1rem;
+            &__body {
+                &--card {
+                    margin: 15px 0;
+                    min-height: 200px;
+                    padding: 10px;
+                    
+                    h3 {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+
+        .blog {
+            padding: 1rem;
+
+            &__body {
+                &--card {
+                    margin: 15px 0;
+                    min-height: 150px;
+                    padding: 10px;
+                    
+                    h3 {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

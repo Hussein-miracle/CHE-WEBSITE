@@ -2,9 +2,6 @@ import React,{ useState } from "react"
 import "./navbar.css";
 
 //import the brands logos
-
-import OAU_logo from "../../assets/images/OAU.png"
-import NSCHE_logo from "../../assets/images/NSChE_logo.png"
 import { useLocation } from "react-router-dom"
 
 const Navbar = () => {
@@ -40,7 +37,7 @@ const Navbar = () => {
 
                     <li><a href="/about-us" className={(location.pathname === "/resources")? "active": ""}>Resources</a></li>
 
-                    <li><a href="/about-us" className={(location.pathname === "/news")? "active": ""}>News &amp; Blog</a></li>
+                    <li><a href="/news-&-blog" className={(location.pathname === "/news-&-blog")? "active": ""}>News &amp; Blog</a></li>
 
                     <li><a href="/about-us" className={(location.pathname === "/contact")? "active": ""}>Contact us</a></li>
                 </ul>
