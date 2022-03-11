@@ -19,6 +19,7 @@ body {
   --green-color:#0D8F45;
   
 }
+
 body::-webkit-scrollbar {
   display: none;
   

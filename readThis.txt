@@ -32,6 +32,15 @@ Date (07/03/2022) NOTE TO ABDULAHI:
         I made the news&blog page;
         Added some little responsiveness to the footer;
         added the header image for the about-us page
+
+
+Date (11/03/2022) NOTE TO ABEL:
+        I've built the coursespage, resources page and people's/staff's homepage;
+        I've also built resources accordion and it's functionality;
+        👋🙂I've still got to build each staff's page(totalling 8 pages and also fix responsiveness);
+
+        I've built a project-item component for you ;
+        All you have build now is the projects page,and the pages for each project (totalling 4 pages),with the contact-us page; 
         
         
 

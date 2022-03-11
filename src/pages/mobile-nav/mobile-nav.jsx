@@ -10,7 +10,9 @@ const MobileNav = ({setShowMobileNav}) => {
 
 
 
-        <ul className="mobile-nav__item--container">
+        <ul className="mobile-nav__item--container"
+        onClick={()=> setShowMobileNav(false)}
+        >
                         <li className="mobile-nav__item">
 
 

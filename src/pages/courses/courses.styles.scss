@@ -1,21 +1,63 @@
 .courses{
+
     &__select{
         margin-bottom: 2.5rem;
         margin-left: 3rem;
         width:30%;
         padding-left: 5px;
         height:5vh;
-        appearance:none;
-        outline: none;
-        border-radius: 4px;
-        color:#fff;
-        background-color: var(--green-color);
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        -o-border-radius: 4px;
+        position: relative;
+        &--options{
+            font-size: .97rem;
+            height:100%;
+            width:110%;
+            appearance:none;
+            outline: none;
+            border:none;
+            border-radius: 4px;
+            color:#fff;
+            transform-origin: center;
+            background-color: var(--green-color);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
         
+            &:focus + .courses__select--btn{
+                border-bottom:.8rem solid #fff;
+                border-top:.8rem solid transparent;
+                transform: translateY(-75%);
+                -webkit-transform: translateY(-75%);
+                -moz-transform: translateY(-75%);
+                -ms-transform: translateY(-75%);
+                -o-transform: translateY(-75%);
+            }
+        }
+        &--btn{
+            z-index: 5;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-20%);
+            background-color:none;
+            border-top:.8rem solid #fff;
+            border-left:.8rem solid transparent;
+            border-right:.8rem solid transparent;
+            border-bottom:.8rem solid transparent;
+            -webkit-transform: translateY(-20%);
+            -moz-transform: translateY(-20%);
+            -ms-transform: translateY(-20%);
+            -o-transform: translateY(-20%);
+            pointer-events: none;
+            transition: all .35s linear;
+            -webkit-transition: all .35s linear;
+            -moz-transition: all .35s linear;
+            -ms-transition: all .35s linear;
+            -o-transition: all .35s linear;
 }
+        
+        
+    }
 
 
     &__header{
@@ -31,7 +73,7 @@
         margin-bottom: 2rem;
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.8rem;
             color: #fff;
             font-weight: 700;
 
@@ -66,7 +108,7 @@
     }
 }
 
-@media screen and (max-width:34.38em) {
+@media(max-width:34.38em) {
     .courses{
     &__select{
         margin-bottom: 2.5rem;
@@ -142,7 +184,17 @@
 @media screen and (max-width:29em) {
     .courses{
     &__select{
-        margin-bottom: 2.5rem;
+        &--btn{
+            width:0;
+            height:0;
+            border-top:5px solid #fff;
+            border-left:5px solid transparent;
+            border-right:5px solid transparent;
+            border-bottom:5px solid transparent;
+            pointer-events:none;
+        }
+        &--options{
+            margin-bottom: 2.5rem;
         margin-left: 3rem;
         width: 55%;
         height:5vh;
@@ -157,10 +209,11 @@
         -ms-border-radius: 4px;
         -o-border-radius: 4px;
 
-        option{
-            font-size: .67rem;
+            option{
+                font-size: .67rem;
+            }
         }
-}
+    }
 
 
     &__header{
@@ -249,7 +302,7 @@
         margin-bottom: 2rem;
 
         h1 {
-            font-size: 1.55rem;
+            // font-size: 1.55rem;
             color: #fff;
             font-weight: 700;
 

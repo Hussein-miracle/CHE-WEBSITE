@@ -4,3 +4,18 @@ background: #0D8F45;
 background: #000000;
 background: #F4C44E;
 footer text: color:#C4C4C4;
+
+Dr. Tunde Owoyemi
+(Reader) 
+Prof. A.B Ajekukale
+(Professor) 
+Prof. T. B Pratt
+(Professor) 
+Dr. Tunde Owoyemi
+(Reader) 
+Prof. A.B Ajekukale
+(Professor) 
+Prof. T. B Pratt
+(Professor) 
+Dr. Tunde Owoyemi
+(Reader) 

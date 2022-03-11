@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import coursesData from "./courses-data";
+import {motion} from "framer-motion";
 import CourseItem from '../../components/course-item/course-item';
 import "./courses.styles.scss";
 
@@ -19,15 +20,21 @@ const Courses = () => {
         <h1>Courses</h1>
       </div>
 
-      {/* <label htmlFor="courses__select--id">^</label> */}
-<select id="courses__select--id" name="courses"
-    className="courses__select"
-   onChange={handleChange}>
-  <option value="harmattan" >Harmattan Semester Courses</option>
-  <option value="rain">Rain Semester Courses</option>
-  <option value="postGraduates">Post Graduate Courses</option>
+      <div className="courses__select">
+        <select id="courses__select-id" name="courses"
+          className="courses__select--options"
+          onChange={handleChange}>
+          <option value="harmattan" >Harmattan Semester Courses</option>
+          <option value="rain">Rain Semester Courses</option>
+          <option value="postGraduates">Post Graduate Courses</option>
 
-</select>
+        </select>
+        <motion.span 
+        
+        className="courses__select--btn"></motion.span>
+
+      </div>
+
       <div className="courses__container">
         <div className="courses__container--header">
           <h4>COURSE CODE</h4>

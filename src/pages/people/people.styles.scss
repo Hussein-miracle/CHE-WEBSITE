@@ -1,0 +1,33 @@
+.people{
+    &__header{
+        height: 25vw;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(../../assets/images/Hero-image.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-position-y: 30%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 3.8rem;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+
+    &__content{
+        padding: 0 3rem;
+        margin: 3rem 2rem ;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,.5fr));
+        grid-gap: 2rem;
+        place-items: center;
+    }
+}
