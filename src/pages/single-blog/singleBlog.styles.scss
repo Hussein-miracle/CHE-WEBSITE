@@ -1,0 +1,30 @@
+.single-blog {
+    padding: 5%;
+
+    h1 {
+        color: #0D8F45;
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+    img {
+        width: 50%;
+        padding: 0 5% 3% 0;
+        float: left;
+    }
+    p {
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .single-blog {
+        img {
+            width: 100%;
+            padding: 0;
+            float: none;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}

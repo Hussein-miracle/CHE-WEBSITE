@@ -14,6 +14,8 @@ import Footer from "./pages/footer/footer";
 
 import MobileNav from "./pages/mobile-nav/mobile-nav";
 import './App.css';
+import SingleNews from "./pages/single-news/singleNews";
+import SingleBlog from "./pages/single-blog/singleBlog";
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
           <Route path="/courses" exact element= {<Courses/>} />
           <Route path="/projects" exact element= {<Projects/>} />
           <Route path="/resources" exact element= {<Resources/>} />
+          <Route path="/singleNews" exact element= {<SingleNews/>} />
+          <Route path="/singleBlog" exact element= {<SingleBlog/>} />
 
         </Routes>
 

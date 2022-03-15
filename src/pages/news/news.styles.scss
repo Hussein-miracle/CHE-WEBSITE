@@ -34,9 +34,13 @@
         }
         &__body {
             &--card {
+                text-decoration: none;
                 margin: 5rem 0;
-                padding: 15em 5em 2em 5em;
+                display: flex;
+                align-items: flex-end;
+                padding: 2% 5%;
                 min-height: 350px;
+                width: 100%;
                 background-size: cover;
 
                 h3 {
@@ -67,6 +71,7 @@
             justify-content: space-between;
 
             &--card {
+                text-decoration: none;
                 width: 46%;
                 margin: 2rem 0;
                 padding: 15em 5em 2em 5em;
