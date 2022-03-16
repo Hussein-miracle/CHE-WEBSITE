@@ -12,9 +12,8 @@ const People = () => {
       <div className="people__content">
       {
         staffData.map( ({id,imgUrl,staffLevel,staffName}) => 
-        <Link key={id} to="/">
+        <Link key={id} to={`/people/staff-${id}`}>
           <StaffCard 
-          
           imgTitle={staffName} 
           imgUrl={imgUrl}
           staffLevel={staffLevel} 

@@ -6,6 +6,9 @@
     color: #fff;
     ul{
         list-style: none;
+        a{
+            text-decoration:none;
+        }
     }
 
     &__content{
@@ -41,13 +44,15 @@
                 justify-content: space-between;
                 align-items: flex-start;
                 gap: 1rem;
-                li{
+                a{
+                    color:#fff;
                     cursor: pointer;
                     transition: all .2s ease-in;
                     -webkit-transition: all .2s ease-in;
                     -moz-transition: all .2s ease-in;
                     -ms-transition: all .2s ease-in;
                     -o-transition: all .2s ease-in;
+                    text-decoration:none;
                     &:hover{
                         color:#F4C44E;
                     }
@@ -131,11 +136,30 @@
     .footer {
         &__content {
             flex-wrap: wrap;
-            padding: 20px;
+            padding:1.25rem;
         }
+        
         &__base{
             font-size: .6rem;
-            padding: 2px 6px;
+            // padding: 2px 6px;
+        }
+    }
+}
+@media (max-width:25em) {
+    .footer {
+        &__content {
+            flex-wrap: wrap;
+            padding:1.25rem;
+            &--navigations{
+                &__items{
+                    margin-left: 0;
+                }
+            }
+        }
+        
+        &__base{
+            font-size: .6rem;
+            // padding: 2px 6px;
         }
     }
 }

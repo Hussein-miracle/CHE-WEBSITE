@@ -1,9 +1,10 @@
 //Images for news and blogs
-import News_pic_1 from '../../assets/images/news_pic_1.png'
-import News_pic_2 from '../../assets/images/news_pic_2.png'
-import News_pic_3 from '../../assets/images/news_pic_3.png'
-import Blogs_pic_1 from '../../assets/images/blogs_pic_1.png'
-import Blogs_pic_2 from '../../assets/images/blogs_pic_2.png'
+import News_pic_1 from '../../assets/images/news_pic_1.png';
+import News_pic_2 from '../../assets/images/news_pic_2.png';
+import News_pic_3 from '../../assets/images/news_pic_3.png';
+
+import Blogs_pic_1 from '../../assets/images/blogs_pic_1.png';
+import Blogs_pic_2 from '../../assets/images/blogs_pic_2.png';
 
 const News_and_Blogs = {
      newsList: [

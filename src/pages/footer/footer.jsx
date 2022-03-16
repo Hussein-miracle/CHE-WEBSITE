@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 import NscheLogo from "../../assets/images/NSChE logo.svg";
 import OAULogo from "../../assets/images/OAU logo.svg";
 import "./footer.styles.scss";
@@ -25,14 +26,15 @@ const Footer = () => {
           <div className="footer__content--navigations">
             <h2 className="footer__content--navigations__title">Navigations</h2>
               <ul className="footer__content--navigations__items">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Staffs</li>
-                <li>Handbook</li>
-                <li>Projects</li>
-                <li>Resources</li>
-                <li>News and Blog</li>
-                <li>Contact Us</li>
+                <li><Link to="/">Home </Link> </li>
+                <li> <Link to="/about-us">About Us</Link></li>
+                <li><Link to="/people">Staffs</Link></li>
+                <li><Link to="/resources" >Handbook</Link></li>
+                <li><Link to="/projects">Projects</Link></li>
+                <li><Link to="/resources" >Resources</Link></li>
+                <li><Link to="/news-&-blog">News and Blog</Link></li>
+                <li><Link to="/contact-us">Contact Us</Link></li>
+
               </ul>
           </div>
           

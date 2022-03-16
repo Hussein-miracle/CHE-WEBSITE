@@ -110,7 +110,7 @@
 
 @media(max-width:34.38em) {
     .courses{
-    &__select{
+       &__select{
         margin-bottom: 2.5rem;
         margin-left: 3rem;
         width: 40%;
@@ -181,6 +181,7 @@
     }
 }
 }
+
 @media screen and (max-width:29em) {
     .courses{
     &__select{

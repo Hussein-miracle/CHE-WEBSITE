@@ -1,0 +1,73 @@
+.staff-item{
+    &__name{
+        margin-bottom: 1.6rem;
+        font-size: 2.2rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+    &__details-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 10%;
+
+    }
+    &__details-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    &__img{
+        // flex: 0.45;
+        object-fit: cover;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+    &__info{
+        // flex: 0.5;
+        align-self: stretch;
+    }
+
+    &__education{
+        &--title{
+            color: var(--green-color);
+            margin-bottom: 1rem;
+        }
+    }
+    &__email{
+        &--title{
+            color: var(--green-color);
+            // margin-bottom: .3rem;
+        }
+    }
+    &__interest{
+        &--title{
+            color: var(--green-color);
+            // margin-bottom: 1rem;
+        }
+    }
+
+    &__selected-publications{
+        &--title{
+            color: var(--green-color);
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__honours-and-awards{
+        &--title{
+            color: var(--green-color);
+            margin-bottom: 1rem;
+        }
+    }
+
+}

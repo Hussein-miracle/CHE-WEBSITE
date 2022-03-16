@@ -1,11 +1,12 @@
 import "./singleBlog.styles.scss"
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
+import withRouter from "../../HOC/withRouter/withRouter";
 import News_and_Blogs from "../news/news_and_blog_data"
 
 
-const SingleBlog = () => {
-    const location = useLocation()
-    const refinedId = parseFloat(location.search.slice(1, 100))
+const SingleBlog = ({location}) => {
+    // const location = location
+    const refinedId = parseFloat(location.search.slice(1, 100));
 
     return (
         <div className="single-blog">
@@ -27,4 +28,4 @@ const SingleBlog = () => {
     )
 }
 
-export default SingleBlog;
+export default withRouter(SingleBlog);
