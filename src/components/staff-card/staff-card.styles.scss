@@ -2,6 +2,7 @@
     cursor: pointer;
     position: relative;
     overflow: hidden;
+
     &__img{
         width: 100%;
         height: 100%;
@@ -12,9 +13,6 @@
         -moz-border-radius: 2px;
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
-
-
-
     }
 
     &__info{
@@ -30,13 +28,7 @@
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         -o-transform: translateX(-50%);
-        //bottom: -50%;
-        //left: 50%;
-        //transform: translateX(-50%);
-        //-webkit-transform: translateX(-50%);
-        //-moz-transform: translateX(-50%);
-        //-ms-transform: translateX(-50%);
-        //-o-transform: translateX(-50%);
+
         transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
         -webkit-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
         -moz-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
@@ -46,8 +38,7 @@
 
     &:hover{
         .staff-card__info{
-        // bottom: 0%;
-        left: 50%;
+            left: 50%;
         
         }
     }
@@ -59,4 +50,116 @@
         color:#F4C44E;
 
     }
+}
+
+@media screen and (max-width:43.4375em) {
+    .staff-card{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+
+    &__info{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 35%;
+        left: -50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -webkit-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -moz-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -ms-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -o-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+}
+
+    &:hover{
+        .staff-card__info{
+            left: 50%;
+        
+        }
+    }
+
+    &__name{
+        color: #fff;
+    }
+    &__level{
+        color:#F4C44E;
+
+    }
+}
+}
+@media screen and (max-width:41.5625em) {
+    .staff-card{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+    }
+
+    &__info{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 30%;
+        left: -50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+
+        transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -webkit-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -moz-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -ms-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+        -o-transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1) .1s;
+}
+
+    &:hover{
+        .staff-card__info{
+            left: 50%;
+        
+        }
+    }
+
+    &__name{
+        color: #fff;
+        // font-size:1.6rem;
+    }
+    &__level{
+        color:#F4C44E;
+
+    }
+}
 }

@@ -1,8 +1,13 @@
 import React from 'react'; 
 import {Link} from "react-router-dom";
+
+
 import staffData from './people.data';
-import "./people.styles.scss";
 import StaffCard from '../../components/staff-card/staff-card.component';
+
+import "./people.styles.scss";
+
+
 const People = () => {
   return (
     <div className="people">

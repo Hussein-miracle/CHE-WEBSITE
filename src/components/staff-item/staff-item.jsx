@@ -12,7 +12,7 @@ const StaffItem = ({staffName,imgUrl,email,education,selectedPublications,resear
                     <div className="staff-item__education">
                         <h3 className="staff-item__education--title">Education</h3>
                         {
-                            education.map(({title,description}) => <p><b>{title}</b>.,{description}</p>)
+                            education.map(({title,description},index) => <p key={index}><b>{title}</b>.,{description}</p>)
                         }
                     </div>
                     <div className="staff-item__interest">

@@ -1,13 +1,11 @@
 import React from 'react';
-import "./staff.styles.scss";
 import staffData from '../people/people.data';
 import withRouter from '../../HOC/withRouter/withRouter';
-
 import StaffItem from '../../components/staff-item/staff-item';
+import "./staff.styles.scss";
 
 const Staff = ({params}) => {
     const {staffId} = params;
-    // console.log(staffId)
 
     return (
         <div className="staff">
@@ -17,7 +15,8 @@ const Staff = ({params}) => {
             <div className="staff__content">
                 {
                     staffData.filter(({id}) => id === +staffId).map( ({id,staffName,imgUrl,email,education,selectedPublications,researchInterests,honorsNAwards,staffLevel}) => {
-                        return (<StaffItem 
+                        return (
+                        <StaffItem 
                             key={id}
                             staffName={staffName}
                             imgUrl={imgUrl}
@@ -27,7 +26,8 @@ const Staff = ({params}) => {
                             selectedPublications ={selectedPublications}
                             researchInterests ={researchInterests}
                             honorsNAwards={honorsNAwards}
-                        />)
+                        />
+                        )
                     })
                 }
             </div>

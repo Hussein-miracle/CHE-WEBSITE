@@ -29,9 +29,9 @@ const Courses = () => {
           <option value="postGraduates">Post Graduate Courses</option>
 
         </select>
-        <motion.span 
+        <span 
         
-        className="courses__select--btn"></motion.span>
+        className="courses__select--btn"></span>
 
       </div>
 

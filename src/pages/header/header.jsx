@@ -75,6 +75,6 @@ const Header =  ({setShowMobileNav})=> {
     )
 }
 
-// homepage.component.propTypes = {}
+
 
 export default Header;

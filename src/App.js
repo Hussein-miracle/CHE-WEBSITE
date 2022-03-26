@@ -22,11 +22,16 @@ import './App.css';
 
 function App() {
   const [showMobileNav ,setShowMobileNav] = useState(false);
+
   return (
     <div className="App">
     
       <Header showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav}/>
-      {showMobileNav? <MobileNav setShowMobileNav={setShowMobileNav}/> :null}
+
+
+      {showMobileNav   ? <MobileNav setShowMobileNav={setShowMobileNav}/> :null}
+
+
         <Routes>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/about-us" exact element= {<AboutUs/>} />
