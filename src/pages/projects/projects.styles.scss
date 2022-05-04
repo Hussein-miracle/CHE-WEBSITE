@@ -23,6 +23,10 @@
     }
 
     &__contents{
+        padding:2rem;
+        h3{
+            margin:10px auto;
+        }
         padding:0 3rem;
         display: flex;
         gap: 3rem;

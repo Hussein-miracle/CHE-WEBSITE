@@ -1,14 +1,44 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import staffData from '../people/people.data';
 import withRouter from '../../HOC/withRouter/withRouter';
 import StaffItem from '../../components/staff-item/staff-item';
 import "./staff.styles.scss";
 
+const StaffVariant = () => ({
+    initial:{
+        opacity:0,
+        y:"100vh",
+    },
+    end:{
+        y:0,
+        opacity:1,
+        transition:{
+            when:"beforeChildren", 
+            staggerChildren:.4,
+            ease:"linear",
+            delay:0,
+        }
+    },
+    leave:{
+        y:"100vh",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
 const Staff = ({params}) => {
     const {staffId} = params;
 
     return (
-        <div className="staff">
+        <motion.div className="staff"
+        variants={StaffVariant()} 
+        initial="initial"
+        animate="end"
+        exit="leave" 
+        
+        >
             <div className="staff__header">
                 <h1>Our <span>Staffs</span></h1>
             </div>
@@ -31,7 +61,7 @@ const Staff = ({params}) => {
                     })
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,12 +1,36 @@
 import React from "react";
+import { motion } from "framer-motion";
 import hodImg from "../../assets/images/Prof-Odejobi.png";
 import aboutImg from "../../assets/images/About-Us-Intro.png";
 import Button from "../../components/button/button.component";
+
 import Card from "../../components/card/card.component";
 import newsAndEventsImg1 from "../../assets/images/Latest-new-and-events-img-1.png";
 import newsAndEventsImg2 from "../../assets/images/Latest-new-and-events-img-2.png";
 import newsAndEventsImg3 from "../../assets/images/Latest-new-and-events-img-3.png";
 import "./homepage.styles.scss";
+
+const HomeVariants = () => ({
+    initial:{
+        opacity:0,
+        y:"-100vh",
+    },
+    end:{
+        y:0,
+        opacity:1,
+        transition:{
+            ease:"linear",
+            delay:0,
+        }
+    },
+    leave:{
+        y:"-100vh",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
 
 const Homepage = () => {
     const cardList = [
@@ -24,7 +48,13 @@ const Homepage = () => {
         }
     ];
     return (
-        <div className="homepage">
+        <motion.div className="homepage"
+        variants={HomeVariants()}
+        initial="initial"
+        animate="end"
+        exit="leave"
+        >
+            
             <header className="homepage__header">
                 
                     <h1>Department Of</h1>                
@@ -104,7 +134,7 @@ const Homepage = () => {
                 
                 </div>
             </section>
-        </div>
+        </motion.div>
     )
 }
 

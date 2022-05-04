@@ -1,6 +1,6 @@
 .resources{
     &__header{
-        height: 25vw;
+        height: 25vh;
         background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(../../assets/images/Hero-image.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -12,7 +12,7 @@
         margin-bottom: 2rem;
 
         h1 {
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             color: #fff;
             font-weight: 700;
 
@@ -24,6 +24,105 @@
     
 
     &__content{
-        
+         
     }
+}
+
+@media screen and (max-width:38.75em){
+    .resources{
+    &__header{
+        height: 25vh;
+        padding-left: 3rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+    
+
+    &__content{
+         
+    }
+}
+}
+
+@media screen and (max-width:29em){
+    .resources{
+    &__header{
+        height: 25vh;
+        padding-left: 2rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+    
+
+    &__content{
+         
+    }
+}
+}
+@media screen and (max-width:22.5em){
+    .resources{
+    &__header{
+        height: 25vh;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 1.8rem;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+    
+
+    &__content{
+         
+    }
+}
+}
+
+@media screen and (max-width:20em){
+    .resources{
+    &__header{
+        height: 25vh;
+        padding-left: 1rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+    
+
+    &__content{
+         
+    }
+}
 }

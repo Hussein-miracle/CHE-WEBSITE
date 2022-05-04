@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import {motion} from "framer-motion"
 import "./staff-card.styles.scss";
 
-const StaffCard = ({imgUrl,staffLevel,staffName}) => {
+const StaffCard = ({imgUrl,staffLevel,staffName,variants}) => {
   return (
-    <div className="staff-card">
-
+    <motion.div className="staff-card"
+      variants={variants}
+        initial="initial"
+        animate="end"
+        exit="leave"
+        whileFocus={{
+          scale:1.5
+        }}
+    >
+      
         <img 
         className="staff-card__img"
         src={`${imgUrl}`} alt={staffName} />
@@ -13,7 +22,7 @@ const StaffCard = ({imgUrl,staffLevel,staffName}) => {
             <h4 className="staff-card__name">{staffName}</h4>
             <h5 className="staff-card__level">{staffLevel}</h5>
         </div>
-    </div>
+    </motion.div>
   )
 }
 

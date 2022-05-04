@@ -44,6 +44,7 @@ const MobileNav = ({setShowMobileNav}) => {
                             <NavLink 
                             activeclassname="active"
                             className="link" to="projects">Projects</NavLink>
+                    
                         </li>
                         <li className="mobile-nav__item">
                             <NavLink activeclassname="active"
@@ -58,6 +59,8 @@ const MobileNav = ({setShowMobileNav}) => {
                             <NavLink 
                             activeclassname="active"
                             className="link" to="contact-us">Contact Us</NavLink>
+
+                            
                         </li>
         </ul>
     </div>

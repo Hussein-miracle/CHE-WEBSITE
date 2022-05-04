@@ -1,14 +1,119 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import "./staff-item.scss";
 
+const StaffItemVariant = () => ({
+    initial:{
+        opacity:0,
+        x:"100vw",
+    },
+    end:{
+        x:0,
+        opacity:1,
+        transition:{
+            when:"beforeChildren",
+            staggerChildren:.6,
+            ease:"linear",
+            delay:0.5,
+        }
+    },
+    leave:{
+        x:"-100vw",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
+
+
+const ImgV = () => ({
+    initial:{
+        opacity:0,
+        x:"-100vw",
+    },
+    end:{
+        x:0,
+        opacity:1,
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    },
+    leave:{
+        x:"100vw",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
+const InfoV = () => ({
+    initial:{
+        opacity:0,
+        x:"-100vw",
+    },
+    end:{
+        x:0,
+        opacity:1,
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    },
+    leave:{
+        x:"100vw",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
+const AchV = () => ({
+    initial:{
+        opacity:0,
+        y:"-100vh",
+    },
+    end:{
+        y:0,
+        opacity:1,
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    },
+    leave:{
+        x:"100vw",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
 const StaffItem = ({staffName,imgUrl,email,education,selectedPublications,researchInterests,honorsNAwards,staffLevel}) => {
     return (
-        <div className="staff-item">
+        <motion.div className="staff-item"
+        variants={StaffItemVariant()}
+        initial="initial"
+        animate="end"
+        exit="leave"
+        
+        >
             <h2 className="staff-item__name">{staffName}  {staffLevel}</h2>
             <div className="staff-item__details-1">
-                <img src={`${imgUrl}`} alt={`${staffName}`} className="staff-item__img" />
+                <motion.img src={`${imgUrl}`} alt={`${staffName}`} className="staff-item__img"
+                variants={ImgV()}
+        initial="initial"
+        animate="end"
+        exit="leave"
+                 />
 
-                <div className="staff-item__info">
+                <motion.div className="staff-item__info"
+                variants={InfoV()} 
+        initial="initial"
+        animate="end"
+        exit="leave"
+                >
                     <div className="staff-item__education">
                         <h3 className="staff-item__education--title">Education</h3>
                         {
@@ -23,10 +128,15 @@ const StaffItem = ({staffName,imgUrl,email,education,selectedPublications,resear
                         <h3 className="staff-item__email--title">Email</h3>
                         <p>{email}</p>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
-            <div className="staff-item__details-2">
+            <motion.div className="staff-item__details-2" 
+            variants={AchV()}
+        initial="initial"
+        animate="end"
+        exit="leave"
+            >
                 <div className="staff-item__selected-publications">
                     <h3 className="staff-item__selected-publications--title">Selected Publications</h3>
                     <p>{selectedPublications}</p>
@@ -37,8 +147,8 @@ const StaffItem = ({staffName,imgUrl,email,education,selectedPublications,resear
 
                     <p>{honorsNAwards}</p>
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

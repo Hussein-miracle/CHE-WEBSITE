@@ -1,0 +1,23 @@
+.scroll-button{
+    position:fixed;
+    
+    bottom:50px;
+    right:50px;
+    z-index:500;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4C44E;
+display: none;
+    cursor: pointer;
+    // pointer-events: none;
+}

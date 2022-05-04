@@ -1,9 +1,32 @@
 import { useReducer } from "react"
-import "./news.styles.scss"
+import "./news.styles.scss";
+import {motion} from "framer-motion";
 import News_and_Blogs from "./news_and_blog_data"
 import Button from "../../components/button/button.component"
 import { Link } from "react-router-dom"
 
+const NewsVariants = () => ({
+    initial:{
+        opacity:0,
+        y:"-100vh",
+    },
+    end:{
+        y:0,
+        opacity:1,
+        transition:{
+            when:"beforeChildren",
+            ease:"linear",
+            delay:0,
+        }
+    },
+    leave:{
+        y:"-100vh",
+        transition:{
+            ease:"linear",
+            delay:0.25,
+        }
+    }
+})
 
 const reducer = (state, action) => {
     switch(action.type) {
@@ -26,7 +49,12 @@ const News = () => {
     const [state, dispatch] = useReducer(reducer, { newsIndex: 4, blogIndex: 4 })
 
     return (
-        <div className="news-and-blogs">
+        <motion.div className="news-and-blogs"
+        variants={NewsVariants()}
+        initial="initial"
+        animate="end"
+        exit="leave"
+        >
 
             <div className="news-and-blogs__header">
                 <h1>News <span>and</span> Blogs</h1>
@@ -79,7 +107,7 @@ const News = () => {
                 <Button text={"Show More"} onClick={() => dispatch({ type: "SHOWMORENEWS" })} />
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

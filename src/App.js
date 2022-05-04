@@ -1,5 +1,6 @@
 import React,{useState} from "react";
-import {Routes,Route} from "react-router-dom";
+import {Routes,Route , useLocation} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import Header from "./pages/header/header";
 import Homepage from "./pages/homepage/homepage";
@@ -12,7 +13,7 @@ import Projects from "./pages/projects/projects";
 import ContactUs from "./pages/contact-us/contact-us";
 import Footer from "./pages/footer/footer";
 import MobileNav from "./pages/mobile-nav/mobile-nav";
-
+import ScrollButton from "./components/scroll-button/scroll-button";
 
 import SingleNews from "./pages/single-news/singleNews";
 import SingleBlog from "./pages/single-blog/singleBlog";
@@ -21,18 +22,21 @@ import Staff from "./pages/staff/staff";
 import './App.css';
 
 function App() {
+  const location = useLocation();
   const [showMobileNav ,setShowMobileNav] = useState(false);
 
   return (
     <div className="App">
-    
+    <ScrollButton itemToObserve={"App"}/>
       <Header showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav}/>
 
 
       {showMobileNav   ? <MobileNav setShowMobileNav={setShowMobileNav}/> :null}
 
+      
 
-        <Routes>
+      <AnimatePresence  exitBeforeEnter>
+        <Routes key={location.key} location={location}>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/about-us" exact element= {<AboutUs/>} />
           <Route path="/news-&-blog" exact element= {<News/>} />
@@ -45,7 +49,7 @@ function App() {
           <Route path="/singleNews" exact element= {<SingleNews/>} />
           <Route path="/singleBlog" exact element= {<SingleBlog/>} />
         </Routes>
-
+      </AnimatePresence>
       <Footer/>
     </div>
   );

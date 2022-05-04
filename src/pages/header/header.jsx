@@ -38,6 +38,8 @@ const Header =  ({setShowMobileNav})=> {
                             activeclassname="active"
                             className="link" to="people">People</NavLink>
 
+                            
+
                         </li>
                         <li className="header__nav--item">
 
@@ -50,6 +52,7 @@ const Header =  ({setShowMobileNav})=> {
                             <NavLink 
                             activeclassname="active"
                             className="link" to="projects">Projects</NavLink>
+                            {/* <h4  className="link" >Projects</h4> */}
                         </li>
                         <li className="header__nav--item">
                             <NavLink activeclassname="active"
@@ -64,6 +67,8 @@ const Header =  ({setShowMobileNav})=> {
                             <NavLink 
                             activeclassname="active"
                             className="link" to="contact-us">Contact Us</NavLink>
+
+                            {/* <h4  className="link" >Contact Us</h4> */}
                         </li>
                     </ul>
                 </nav>

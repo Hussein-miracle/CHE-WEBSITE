@@ -3,7 +3,51 @@ import coursesData from "./courses-data";
 import {motion} from "framer-motion";
 import CourseItem from '../../components/course-item/course-item';
 import "./courses.styles.scss";
-
+const CoursesVariants = () => ({
+    initial:{
+        opacity:0,
+        y:"-100vh",
+    },
+    end:{
+        y:0,
+        opacity:1,
+        transition:{
+            delay:.05,
+            type:"spring",
+            damping:30,
+            when:"beforeChildren"
+        }
+    },
+    leave:{
+        y:"100vh",
+        transition:{
+            ease:"easeInOut",
+            duration:1
+        }
+    }
+})
+const selectVariant = () => ({
+    initial:{
+        opacity:0,
+        x:"-100vw",
+    },
+    end:{
+        x:0,
+        opacity:1,
+        transition:{
+            delay:.05,
+            type:"spring",
+            damping:30
+        }
+    },
+    leave:{
+        x:"100vw",
+        transition:{
+            ease:"easeInOut",
+            duration:1
+        }
+    }
+})
 const Courses = () => {
   const courses = coursesData;
 
@@ -15,12 +59,22 @@ const Courses = () => {
 
 
   return (
-    <section className="courses">
+    <motion.section className="courses"
+        variants={CoursesVariants()}
+        initial="initial"
+        animate="end"
+        exit="leave" 
+    >
       <div className="courses__header">
         <h1>Courses</h1>
       </div>
 
-      <div className="courses__select">
+      <motion.div className="courses__select" 
+        variants={selectVariant()}
+        initial="initial"
+        animate="end"
+        exit="leave" 
+      >
         <select id="courses__select-id" name="courses"
           className="courses__select--options"
           onChange={handleChange}>
@@ -33,7 +87,7 @@ const Courses = () => {
         
         className="courses__select--btn"></span>
 
-      </div>
+      </motion.div>
 
       <div className="courses__container">
         <div className="courses__container--header">
@@ -45,11 +99,11 @@ const Courses = () => {
 
         <div className="courses__list">
           {
-            courseList.map( ({id,courseCode,unit,courseTitle}) =>  <CourseItem courseCode={courseCode} unit={unit} courseTitle={courseTitle} key={id} />)
+            courseList.map( ({id,courseCode,unit,courseTitle},i) =>  <CourseItem courseCode={courseCode} unit={unit} courseTitle={courseTitle} key={id} index={i} />) 
           }
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

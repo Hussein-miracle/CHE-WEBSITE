@@ -1,0 +1,45 @@
+.contact-us{
+    &__header{
+        height: 25vh;
+        background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url(../../assets/images/Hero-image.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        // background-position-y: 30%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 4rem;
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 8vw;
+            color: #fff;
+            font-weight: 700;
+
+            span{
+                color: var(--yellow-color);
+            }
+        }
+    }
+    
+
+    &__content{
+        display:flex;
+        flex-direction:column;
+
+         padding:0 3rem;
+
+        gap: 3rem;
+        h5{
+            margin:10px auto;
+        }
+
+        .icon-progress{
+            margin:10pc auto;
+        width:75%;
+        height:75%;
+    }
+    }
+
+    
+}
