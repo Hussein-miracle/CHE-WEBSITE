@@ -23,6 +23,7 @@ const PeopleVariants = () => ({
         }
     },
     leave:{
+        opacity:0,
         y:"100vh",
         transition:{
             ease:"easeInOut",
@@ -46,6 +47,7 @@ const cardVariant = (i) => ({
         }
     },
     leave:{
+        opacity:0,
         x:"100vw",
         transition:{
             ease:"easeInOut",

@@ -37,7 +37,7 @@ const ResourceItem = ({addImg,name,linkText,addText,variants}) => {
     initial="initial"
 
     animate="final"
-    
+    exit='exit'
     >
         <div className="resource-item__title"
         onClick={() => setClicked(!clicked)}

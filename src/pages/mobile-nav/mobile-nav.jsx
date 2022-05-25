@@ -40,12 +40,12 @@ const MobileNav = ({setShowMobileNav}) => {
                             className="link" to="courses">Courses</NavLink>
 
                         </li>
-                        <li className="mobile-nav__item">
+                        {/* <li className="mobile-nav__item">
                             <NavLink 
                             activeclassname="active"
                             className="link" to="projects">Projects</NavLink>
                     
-                        </li>
+                        </li> */}
                         <li className="mobile-nav__item">
                             <NavLink activeclassname="active"
                             className="link"  to="resources">Resources</NavLink>
@@ -55,13 +55,13 @@ const MobileNav = ({setShowMobileNav}) => {
                             activeclassname="active"
                             className="link"  to="news-&-blog">News & Blog</NavLink>
                         </li>
-                        <li className="mobile-nav__item">
+                        {/* <li className="mobile-nav__item">
                             <NavLink 
                             activeclassname="active"
                             className="link" to="contact-us">Contact Us</NavLink>
 
                             
-                        </li>
+                        </li> */}
         </ul>
     </div>
   )

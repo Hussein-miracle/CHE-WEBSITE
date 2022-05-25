@@ -19,12 +19,16 @@ const HomeVariants = () => ({
         y:0,
         opacity:1,
         transition:{
-            ease:"linear",
+            staggerChildren:5,
+            when:'beforeChildren',
             delay:0,
+            type:"spring",
+            damping:25,
         }
     },
     leave:{
-        y:"-100vh",
+        opacity:0,
+        y:"100vh",
         transition:{
             ease:"linear",
             delay:0.25,

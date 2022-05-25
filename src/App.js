@@ -9,8 +9,8 @@ import News from "./pages/news/news";
 import People from "./pages/people/people";
 import Courses from "./pages/courses/courses";
 import Resources from "./pages/resources/resources";
-import Projects from "./pages/projects/projects";
-import ContactUs from "./pages/contact-us/contact-us";
+// import Projects from "./pages/projects/projects";
+// import ContactUs from "./pages/contact-us/contact-us";
 import Footer from "./pages/footer/footer";
 import MobileNav from "./pages/mobile-nav/mobile-nav";
 import ScrollButton from "./components/scroll-button/scroll-button";
@@ -37,14 +37,14 @@ function App() {
 
       <AnimatePresence  exitBeforeEnter>
         <Routes key={location.key} location={location}>
-          <Route path="/" exact element={<Homepage />} />
+          <Route path="/" exact element={<Homepage />} /> 
           <Route path="/about-us" exact element= {<AboutUs/>} />
           <Route path="/news-&-blog" exact element= {<News/>} />
           <Route path="/people" exact element= {<People/>} />
           <Route path="/people/staff-:staffId" exact element= {<Staff/>} />
-          <Route path="/contact-us" exact element= {<ContactUs/>} />
+          {/* <Route path="/contact-us" exact element= {<ContactUs/>} /> */}
           <Route path="/courses" exact element= {<Courses/>} />
-          <Route path="/projects" exact element= {<Projects/>} />
+          {/* <Route path="/projects" exact element= {<Projects/>} /> */}
           <Route path="/resources" exact element= {<Resources/>} />
           <Route path="/singleNews" exact element= {<SingleNews/>} />
           <Route path="/singleBlog" exact element= {<SingleBlog/>} />

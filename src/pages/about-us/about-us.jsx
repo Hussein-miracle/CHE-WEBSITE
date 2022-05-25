@@ -1,6 +1,6 @@
-import "./about-us.css";
-import { motion } from "framer-motion";
-
+import { useEffect } from "react";
+import { motion , useAnimation} from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Beakers from "../../assets/images/beakers.png"
 import Engineers from "../../assets/images/engineers.png"
 import separation from "../../assets/images/separation.png"
@@ -10,23 +10,26 @@ import reactions from "../../assets/images/reactions.png"
 import energy from "../../assets/images/energy.png"
 import petroleum from "../../assets/images/petroleum.png"
 import process from "../../assets/images/process.png"
- 
+import "./about-us.css";
 
 const AboutVariants = () => ({
     initial:{
         opacity:0,
         y:"-100vh"
     },
-    end:{
+    final:{
         opacity:1,
         y:0,
         transition:{
+            staggerChildren:5,
+            when:'beforeChildren',
             delay:0,
             type:"spring",
             damping:30
         }
     },
     leave:{
+        opacity:0,
         y:"100vh",
         transition:{
             ease:"easeInOut",
@@ -44,7 +47,18 @@ const Variants = (i) => ({
                             y:0,
                             opacity:1,
                             transition:{
-                            delay:i * 0.5
+                                type:"spring",
+                                delay:i * 0.5,
+                            }
+                        },
+                        leave:{
+                            opacity:0,
+                            y:-50,
+                            transition:{
+                                // duration:1,
+                                ease:"easeInOut",
+                                type:"tween",
+                                delay:i * 0.25,
                             }
                         }
                         } );
@@ -52,11 +66,26 @@ const Variants = (i) => ({
 
 
 const AboutUs = () => {
+    const {ref , inView} = useInView();
+    // const { ref:} = useInView();
+    const animation = useAnimation();
+    useEffect(()=>{
+        // console.log('inViiew Aboutus?=',inView);
+        if(inView){
+            animation.start('final');
+        };
+
+        if(!inView){
+            animation.start('leave');
+        };
+
+    },[inView,animation])
+
     return (
         <motion.div className="about"
         variants={AboutVariants()}
         initial="initial"
-        animate="end"
+        animate="final"
         exit="leave"
         >
             <div className="heading">
@@ -93,13 +122,13 @@ const AboutUs = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit pulvinar diam tristique sit facilisi dui duis. Sagittis rhoncus, vitae, libero at pulvinar diam arcu ut aenean.Proin nec rhoncus velit ut nunc tellus. Arcu faucibus tempor urna, eget egestas. Senectus suscipit amet amet aliquet pretium, sagittis nunc. Urna nulla leo duis nunc nunc enim pulvinar.cu faucibus tempor urna, eget egestas. Senectus suscipit amet amet aliquet pretium, sagittis nunc. Urna nulla leo duis nunc nunc enim pulvinar.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit pulvinar diam tristique sit facilisi dui duis. Sagittis rhoncus, vitae, libero at pulvinar diam arcu ut aenean.Proin nec rhoncus velit ut nunc tellus. Arcu faucibus tempor urna, eget egestas. Senectus suscipit amet amet aliquet pretium, sagittis nunc. Urna nulla leo duis nunc nunc enim pulvinar.cu faucibus tempor urna, eget egestas. Senectus suscipit amet amet aliquet pretium, sagittis nunc. Urna nulla leo duis nunc nunc enim pulvinar.</p>
             </div>
-            <div className="research">
+            <div ref={ref} className="research">
                 <h1>Research Areas</h1>
-                <div className="areas">
+                <div  className="areas">
 
                     <motion.div className="area" 
                     initial="initial"
-                    animate="final"
+                    animate={animation}
                     variants={Variants(0)} 
                     >
                         <img src={separation} alt="engineers"/>
@@ -107,40 +136,40 @@ const AboutUs = () => {
                     </motion.div>
                     <motion.div className="area"
                     initial="initial"
-                    animate="final"
+                    animate={animation}
                     variants={Variants(1)} >
                         <img src={biochemical} alt="engineers"/>
                         <h4>Biochemical Engineering</h4>
                     </motion.div>
                     <motion.div className="area"
                     initial="initial"
-                    animate="final"
+                    animate={animation}
                     variants={Variants(2)} >
                         <img src={environmental} alt="engineers"/>
                         <h4>Environmental Engineering</h4>
                     </motion.div>
                     <motion.div className="area" 
                     initial="initial"
-                    animate="final"
+                    animate={animation}
                     variants={Variants(3)}>
                         <img src={reactions} alt="engineers"/>
                         <h4>Reactions Engineering</h4>
                     </motion.div>
                     <motion.div className="area" initial="initial"
-                    animate="final"
+                    animate={animation}
                                    variants={Variants(4)}>
                         <img src={energy} alt="engineers"/>
                         <h4>Energy and Thermodynamics</h4>
                     </motion.div>
                     <motion.div className="area" initial="initial"
-                    animate="final"
+                    animate={animation}
                                        variants={Variants(5)}>
                         <img src={petroleum} alt="engineers"/>
                         <h4>Petroleum Engineering</h4>
                     </motion.div>
                     <motion.div className="area"
                     initial="initial"
-                    animate="final"
+                    animate={animation}
                     variants={Variants(6)}>
                         <img src={process} alt="engineers"/>
                         <h4>Process Systems Engineering</h4>

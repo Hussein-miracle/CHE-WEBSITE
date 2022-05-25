@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+// import React,{useEffect} from 'react';
+import {motion} from "framer-motion";
+// import { useInView } from 'react-intersection-observer';
 import "./course-item.styles.scss";
 
 const CourseVariants = (i) => ({
@@ -18,21 +19,26 @@ const CourseVariants = (i) => ({
         }
     },
     leave:{
+        opacity:0,
         y:"-100vh",
         transition:{
             ease:"linear",
             delay:0.25,
         }
     }
-})
+}) 
 
 const CourseItem = ({unit,courseTitle,courseCode,index}) => {
+
     return (
         <motion.div className="course-item"
+        // ref={ref}
         variants={CourseVariants(index)}
+        // variants={CourseVariants(id)}
         initial="initial"
-        animate="end"
+        animate='end'
         exit="leave"
+
         >
             <h4>{`${courseCode}`}</h4>
             <h4>{`${courseTitle}`}</h4>

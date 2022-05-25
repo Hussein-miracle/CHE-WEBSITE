@@ -17,6 +17,7 @@ const SNVariants = () => ({
         }
     },
     leave:{
+        opacity:0,
         y:"-100vh",
         transition:{
             ease:"linear",
@@ -38,6 +39,7 @@ const SNChildVariants = () => ({
         }
     },
     leave:{
+        opacity:0,
         y:"-100vh",
         transition:{
             ease:"linear",

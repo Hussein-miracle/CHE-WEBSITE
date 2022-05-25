@@ -2,9 +2,13 @@ import React from "react";
 import {motion} from "framer-motion";
 import "./nav-button.styles.scss";
 
-const NavButton = ({setShowMobileNav}) => {
+const NavButton = ({setShowMobileNav, showMobileNav }) => {
     return (
         <div className="nav__btn" 
+        style={{
+            visibility: showMobileNav ? 'hidden' : 'visible',
+            opacity: showMobileNav ? 0 : 1,
+        }}
         onClick={() => setShowMobileNav(true)}>
 
             <motion.svg

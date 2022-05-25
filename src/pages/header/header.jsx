@@ -7,7 +7,7 @@ import OAULogo from "../../assets/images/OAU logo.png";
 import "./header.styles.scss";
 
 
-const Header =  ({setShowMobileNav})=> {
+const Header =  ({setShowMobileNav,showMobileNav })=> {
 
     return (        
             <header className="header">
@@ -48,12 +48,12 @@ const Header =  ({setShowMobileNav})=> {
                             className="link" to="courses">Courses</NavLink>
 
                         </li>
-                        <li className="header__nav--item">
+                        {/* <li className="header__nav--item">
                             <NavLink 
                             activeclassname="active"
                             className="link" to="projects">Projects</NavLink>
-                            {/* <h4  className="link" >Projects</h4> */}
-                        </li>
+                        
+                        </li> */}
                         <li className="header__nav--item">
                             <NavLink activeclassname="active"
                             className="link"  to="resources">Resources</NavLink>
@@ -63,17 +63,15 @@ const Header =  ({setShowMobileNav})=> {
                             activeclassname="active"
                             className="link"  to="news-&-blog">News & Blog</NavLink>
                         </li>
-                        <li className="header__nav--item">
+                        {/* <li className="header__nav--item">
                             <NavLink 
                             activeclassname="active"
                             className="link" to="contact-us">Contact Us</NavLink>
-
-                            {/* <h4  className="link" >Contact Us</h4> */}
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
                 
-                    <NavButton  setShowMobileNav={setShowMobileNav}/>
+                    <NavButton  setShowMobileNav={setShowMobileNav} showMobileNav={showMobileNav} />
                 
             </header>
         

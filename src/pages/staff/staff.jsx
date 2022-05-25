@@ -21,6 +21,7 @@ const StaffVariant = () => ({
         }
     },
     leave:{
+        opacity:0,
         y:"100vh",
         transition:{
             ease:"linear",
