@@ -1,8 +1,12 @@
-import React,{useState , useEffect} from 'react';
+import React,{useState , 
+  // useEffect
+} from 'react';
 import coursesData from "./courses-data";
-import {motion, useAnimation} from "framer-motion";
-import { useInView } from 'react-intersection-observer';
-import { useCustomAnimate } from '../../custom-hooks/animation-hooks';
+import {motion,
+  //  useAnimation  
+} from "framer-motion";
+// import { useInView } from 'react-intersection-observer';
+// import { useCustomAnimate } from '../../custom-hooks/animation-hooks';
 import CourseItem from '../../components/course-item/course-item';
 import "./courses.styles.scss";
 const CoursesVariants = () => ({
@@ -78,23 +82,7 @@ const selectVariant = () => ({
     }
 })
 const Courses = () => {
-  const {ref: itemRef  } = useCustomAnimate(0.2,'initial','end');
   const courses = coursesData;
-
-  const controls = useAnimation(); 
-  const {ref , inView} = useInView({
-    threshold: 0.1,
-  });
-
-  useEffect(() => {
-    if(inView){
-      controls.start('end');
-    }
-    if(!inView) controls.start('leave');
-    
-    // console.log('useEffect Hook, inView=',inView);
-  }, [inView,controls])
-  
 
   const [courseList,setCourseList] = useState(courses["harmattan"]);
 
@@ -146,15 +134,17 @@ const Courses = () => {
 
         <motion.div className="courses__list"
         variants={CoursesItemContainerVariants()}
-        ref={ref}
+        // ref={ref}
         initial="initial"
-        animate={controls}
+        animate='end'
         exit="leave"
         >
 
 
           {
-            courseList.map( ({id,courseCode,unit,courseTitle},i) =>  <CourseItem courseCode={courseCode} unit={unit} courseTitle={courseTitle} key={id} index={i}  itemRef={itemRef} />
+            courseList.map( ({id,courseCode,unit,courseTitle},i) =>  <CourseItem courseCode={courseCode} unit={unit} courseTitle={courseTitle} key={id} index={i}  
+            // itemRef={itemRef} 
+            />
             ) 
           }
         </motion.div>
